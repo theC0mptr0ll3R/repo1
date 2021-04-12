@@ -15,7 +15,7 @@ for f in fileListArray:
 fName = fNameModifier.sub('', fName)
 
 for i in range(int(numberofFiles)):
-    newFiles = newFiles + fName + '_JA_' + str(i+1).zfill(2) + '.wav\n'
+    newFiles = newFiles + fName + str(i+1).zfill(2) + '.wav\n'
 
 newFiles = newFiles[:-1]
 
