@@ -24,7 +24,6 @@ except IOError:
     sys.exit(0)
 
 kks = kakasi()
-
 kks.setMode('H', None)
 kks.setMode('K', None)
 kks.setMode('J', 'H')
