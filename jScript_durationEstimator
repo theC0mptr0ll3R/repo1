@@ -13,6 +13,7 @@ jFileBuffer = ''
 jBufferArray = []
 outBuffer = ''
 
+
 try:
     jFile = codecs.open(fName, 'r', 'utf_8')
     jFileBuffer = jFile.read()
@@ -21,13 +22,13 @@ except IOError:
     print('ERROR: The specified file cannot be accessed.\nSelect a valid text file and try again.\nExiting...')
     sys.exit(0)
 
-kks = kakasi()
+kakasi = kakasi()
 
-kks.setMode('H', None)
-kks.setMode('K', None)
-kks.setMode('J', 'H')
+kakasi.setMode('H', None)
+kakasi.setMode('K', None)
+kakasi.setMode('J', 'H')
 
-conv = kks.getConverter()
+conv = kakasi.getConverter()
 
 jBufferArray = jFileBuffer.split('\n')
 
