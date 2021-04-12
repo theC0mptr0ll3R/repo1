@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 # jScript_durationEstimator
 # Outputs estimated duration of each line
-# ver. 1: September 28, 2020
+# ver. 1: Sep 28, 2020
+# ver. 2: Apr 12, 2021 - with python3
 # (c) Oki Mikito, 2020. All rights reserved.
 
 import sys, codecs, os
@@ -13,7 +14,6 @@ jFileBuffer = ''
 jBufferArray = []
 outBuffer = ''
 
-
 try:
     jFile = codecs.open(fName, 'r', 'utf_8')
     jFileBuffer = jFile.read()
@@ -22,13 +22,13 @@ except IOError:
     print('ERROR: The specified file cannot be accessed.\nSelect a valid text file and try again.\nExiting...')
     sys.exit(0)
 
-kakasi = kakasi()
+kks = kakasi()
 
-kakasi.setMode('H', None)
-kakasi.setMode('K', None)
-kakasi.setMode('J', 'H')
+kks.setMode('H', None)
+kks.setMode('K', None)
+kks.setMode('J', 'H')
 
-conv = kakasi.getConverter()
+conv = kks.getConverter()
 
 jBufferArray = jFileBuffer.split('\n')
 
