@@ -19,6 +19,7 @@ try:
     jFileBuffer = jFile.read()
     jFile.close()
 except IOError:
+    print('Usage: jScript_durationEstimator [filename_of_the_Japanese_script_saved_in_UTF-8.txt]')
     print('ERROR: The specified file cannot be accessed.\nSelect a valid text file and try again.\nExiting...')
     sys.exit(0)
 
